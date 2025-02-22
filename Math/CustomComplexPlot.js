@@ -52,12 +52,12 @@ vec2 mapping(vec2 z) {
   
   bool toggleLines = true;
   bool toggleDiags = true;
-  float LineScale =100.0; 
-  float DiagScale =100.0; 
+  float LineScale =500.0; 
+  float DiagScale =500.0; 
 
   bool toggleUnitMask = false;
   float OneUnitScale= 20.0;//100000000000000000000000000000000000000000.0;
-  float OneUnitScalePow =-64.0; 
+  float OneUnitScalePow =-20.0; 
   float OneUnitTarget =1.0; 
 
 
@@ -66,7 +66,8 @@ vec2 mapping(vec2 z) {
     */
     for (int i=0; i<1; i++) {
     
-    z = cdiv((cdiv(czeta(z),csinh(z))),vec2(PI,0.0));
+    z = czeta(z);
+    //cdiv((cdiv(czeta(z),csinh(z))),vec2(PI,0.0));
     
     if (toggleUnitP)
     {
